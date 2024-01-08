@@ -17,6 +17,7 @@ import { useNavigation } from "@react-navigation/native";
 import OnboardingImg1 from "../../../assets/images/onboarding/onboarding1.png";
 import OnboardingImg2 from "../../../assets/images/onboarding/onboarding2.png";
 import OnboardingImg3 from "../../../assets/images/onboarding/onboarding3.png";
+import CustomTextComponent from "../../components/ui/Text";
 
 const onboardingSteps = [
   {
@@ -79,12 +80,12 @@ export default function OnboardingScreen() {
           <View className="flex-1">
             {/* Skip */}
             <View className="flex flex-row justify-end p-5">
-              <TouchableOpacity
-                onPress={() => navigation.navigate("register")}
-              >
-                <Text className="text-center text-white text-xl font-bold">
-                  Skip
-                </Text>
+              <TouchableOpacity onPress={() => navigation.navigate("register")}>
+                <CustomTextComponent
+                  type={"semibold"}
+                  content={`Skip`}
+                  additionalClasses={`text-center text-white text-xl font-bold`}
+                />
               </TouchableOpacity>
             </View>
             {/* Images */}
@@ -95,12 +96,16 @@ export default function OnboardingScreen() {
             <View className="flex justify-center items-center h-[50%] p-5">
               <View className="w-full h-full bg-white rounded-2xl p-5 flex justify-center">
                 <View>
-                  <Text className="text-center text-[#13085E] font-bold text-3xl">
-                    {data.title}
-                  </Text>
-                  <Text className="text-center text-[#13085E]/80 text-xl mt-3">
-                    {data.description}
-                  </Text>
+                  <CustomTextComponent
+                    type={"bold"}
+                    content={data.title}
+                    additionalClasses={`text-center text-[#13085E] font-bold text-3xl`}
+                  />
+                  <CustomTextComponent
+                    type={"regular"}
+                    content={data.description}
+                    additionalClasses={`text-center text-[#13085E]/80 text-xl mt-3`}
+                  />
                 </View>
                 {/* Onboarding Steps Indicator */}
                 <View className="flex flex-row items-center justify-center space-x-2 my-5">
@@ -125,9 +130,11 @@ export default function OnboardingScreen() {
                         : () => onContinue()
                     }
                   >
-                    <Text className="text-center text-white text-xl font-bold">
-                      {isLastScreen ? "Get Started" : "Next"}
-                    </Text>
+                    <CustomTextComponent
+                      type={"semibold"}
+                      content={isLastScreen ? "Get Started" : "Next"}
+                      additionalClasses={`text-center text-white text-xl font-bold`}
+                    />
                   </TouchableOpacity>
                 </View>
               </View>

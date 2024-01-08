@@ -8,7 +8,7 @@ import {
 import CustomTextComponent from "../../../components/ui/Text";
 import CustomTextInput from "../../../components/ui/TextInput";
 
-export default function RegisterScreen() {
+export default function LoginScreen() {
   const navigation = useNavigation();
   return (
     <SafeAreaView className="bg-[#F5F7FF] flex-1">
@@ -21,20 +21,12 @@ export default function RegisterScreen() {
           />
           <CustomTextComponent
             type={"regular"}
-            content={`Hey there! create an account to get started.`}
+            content={`Sign in to your account`}
             additionalClasses={`text-[#777777] text-xl`}
           />
         </View>
         {/* Form */}
         <View className="my-5">
-          <View className="mb-5">
-            <CustomTextComponent
-              type={"semibold"}
-              content={`Name`}
-              additionalClasses={`text-xl`}
-            />
-            <CustomTextInput placeholder="Jeff Bezos" />
-          </View>
           <View className="mb-5">
             <CustomTextComponent
               type={"semibold"}
@@ -54,7 +46,7 @@ export default function RegisterScreen() {
           <TouchableOpacity className="bg-[#183a37] px-4 py-3 rounded-2xl mt-5">
             <CustomTextComponent
               type={"bold"}
-              content={`Sign Up`}
+              content={`Sign In`}
               additionalClasses={`text-center text-white text-xl`}
             />
           </TouchableOpacity>
@@ -63,13 +55,13 @@ export default function RegisterScreen() {
         <View className="flex flex-row items-center gap-[1.5px]">
           <CustomTextComponent
             type={"regular"}
-            content={`Already have an account?`}
+            content={`Don't have an account?`}
             additionalClasses={`text-lg`}
           />
-          <TouchableOpacity onPress={() => navigation.navigate("login")}>
+          <TouchableOpacity onPress={() => navigation.navigate("register")}>
             <CustomTextComponent
               type={"bold"}
-              content={`Sign In`}
+              content={`Sign Up`}
               additionalClasses={`text-[#183a37] text-lg`}
             />
           </TouchableOpacity>

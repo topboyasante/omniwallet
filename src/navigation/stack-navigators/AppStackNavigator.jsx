@@ -1,10 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from '../../screens/app/home';
+import AuthTabNavigator from "./AuthTabNavigator";
+
+const Stack = createNativeStackNavigator();
 
 export default function AppStackNavigator() {
   return (
-    <View>
-      <Text>AppStackNavigator</Text>
-    </View>
+    <Stack.Navigator
+    screenOptions={{
+      headerShown: false,
+    }}
+  >
+    <Stack.Screen name="tabs" component={AuthTabNavigator} />
+  </Stack.Navigator>
   )
 }

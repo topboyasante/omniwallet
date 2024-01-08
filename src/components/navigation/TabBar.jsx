@@ -111,7 +111,7 @@ export default function TabBar({ state, descriptors, navigation }) {
               <View className="pt-2 flex justify-center items-center">
                 {renderIcons(label)}
                 <CustomTextComponent
-                  type={isFocused ? "bold" : "regular"}
+                  type={isFocused ? "semibold" : "regular"}
                   content={label}
                 />
               </View>

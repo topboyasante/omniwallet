@@ -1,10 +1,11 @@
 import React from "react";
 import { View } from "react-native";
-import SafeAreaContainer from "../../../../components/ui/SafeAreaContainer";
-import CustomTextComponent from "../../../../components/ui/Text";
-import ComponentSwitcher from "../../../../components/ui/ComponentSwitcher";
 import ExistingCardForm from "../../../../components/screen-components/cards/ExistingCardForm";
 import VirtualCardForm from "../../../../components/screen-components/cards/VirtualCardForm";
+import ComponentSwitcher from "../../../../components/ui/ComponentSwitcher";
+import SafeAreaContainer from "../../../../components/ui/SafeAreaContainer";
+import CustomTextComponent from "../../../../components/ui/Text";
+import BackButton from "../../../../components/ui/BackButton";
 
 const screens = [
   {
@@ -22,17 +23,20 @@ const screens = [
 export default function AddCardScreen() {
   return (
     <SafeAreaContainer>
-      <View className="mb-3">
-        <CustomTextComponent
-          type={`semibold`}
-          content={`Add A Card`}
-          additionalClasses={`text-xl`}
-        />
-        <CustomTextComponent
-          type={`regular`}
-          content={`Upload your existing card, or create a virtual one`}
-          additionalClasses={`text-lg text-[#777777]`}
-        />
+      <View className="mb-5">
+        <BackButton />
+        <View>
+          <CustomTextComponent
+            type={`semibold`}
+            content={`Add A Card`}
+            additionalClasses={`text-xl`}
+          />
+          <CustomTextComponent
+            type={`regular`}
+            content={`Upload your existing card, or create a virtual one`}
+            additionalClasses={`text-lg text-[#777777]`}
+          />
+        </View>
       </View>
       <View>
         <ComponentSwitcher components={screens} />

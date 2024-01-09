@@ -34,6 +34,7 @@ export default function CardsSection() {
             cardNumber={item.cardNumber}
             expiryDate={item.expiryDate}
             index={item.index}
+            fullWidth={false}
           />
         )}
         keyExtractor={(item) => item.cardNumber}

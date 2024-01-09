@@ -12,9 +12,16 @@ export default function CreditCard({
   cardType,
   expiryDate,
   balance,
+  fullWidth,
 }) {
   return (
-    <View className="flex-1 bg-[#121212] w-[360px] h-[230px] rounded-xl">
+    <View
+      className={
+        fullWidth
+          ? "flex-1 bg-[#121212] w-full h-[230px] rounded-xl"
+          : "flex-1 bg-[#121212] w-[350px] h-[230px] rounded-xl"
+      }
+    >
       <ImageBackground
         source={CardBG}
         className="w-full h-full"

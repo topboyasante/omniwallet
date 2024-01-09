@@ -16,6 +16,7 @@ export default function AppStackNavigator() {
 
     {/* Pages that we do not want to show on our bottom tabs */}
     <Stack.Screen name="add-card" component={AddCardScreen} />
+    <Stack.Screen name="add-savings-goal" component={AddCardScreen} />
   </Stack.Navigator>
   )
 }

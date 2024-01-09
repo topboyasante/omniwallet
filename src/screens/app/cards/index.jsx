@@ -1,11 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { Modal, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Modal, ScrollView, TouchableOpacity, View } from "react-native";
+import CreditCard from "../../../components/cards/CreditCard";
 import SafeAreaContainer from "../../../components/ui/SafeAreaContainer";
 import CustomTextComponent from "../../../components/ui/Text";
 import { useOmniStore } from "../../../zustand";
-import CreditCard from "../../../components/cards/CreditCard";
-import { useNavigation } from "@react-navigation/native";
-import { PlusIcon as PlusIconSolid } from "react-native-heroicons/solid";
 
 export default function CardScreen() {
   const navigation = useNavigation();
@@ -27,18 +26,16 @@ export default function CardScreen() {
           />
           <TouchableOpacity
             onPress={() => navigation.navigate("add-card")}
-            className="bg-black rounded-md px-2 py-1 flex flex-row items-center"
+            className="bg-black rounded-full px-5 py-2 flex flex-row items-center"
           >
-            <PlusIconSolid color={"white"} size={15} />
-
             <CustomTextComponent
-              type={`regular`}
+              type={`semibold`}
               content={`Add Card`}
-              additionalClasses={`text-lg text-white ml-2`}
+              additionalClasses={`text-lg text-white ml-1`}
             />
           </TouchableOpacity>
         </View>
-        <View>
+        <View className="flex justify-center">
           {wallets.map((item, index) => {
             return (
               <View key={index}>
@@ -56,6 +53,7 @@ export default function CardScreen() {
                     cardNumber={item.cardNumber}
                     expiryDate={item.expiryDate}
                     index={item.index}
+                    fullWidth={true}
                   />
                 </TouchableOpacity>
                 <Modal
@@ -89,6 +87,7 @@ export default function CardScreen() {
                         cardNumber={selectedCard.cardNumber}
                         expiryDate={selectedCard.expiryDate}
                         index={selectedCard.index}
+                        fullWidth={true}
                       />
                     </View>
                     <View className="flex flex-row items-center space-x-3 my-5">

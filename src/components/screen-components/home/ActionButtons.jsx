@@ -39,6 +39,7 @@ export default function ActionButtons() {
         return (
           <TouchableOpacity
             onPress={() => navigation.navigate(`${item.navigateTo}`)}
+            key={index}
           >
             <View className="flex items-center gap-2">
               <View className="bg-black rounded-full p-5">{item.icon}</View>

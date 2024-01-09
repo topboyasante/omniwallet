@@ -9,7 +9,7 @@ import CustomTextComponent from "../ui/Text";
 export default function PageHeader() {
   return (
     <SafeAreaView className="bg-white">
-      <View className="flex flex-row justify-between items-center p-5">
+      <View className="flex flex-row justify-between items-center px-3 py-5">
         {/* Left Side */}
         <View>
           <CustomTextComponent

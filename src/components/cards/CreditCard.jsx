@@ -14,7 +14,7 @@ export default function CreditCard({
   balance,
 }) {
   return (
-    <View className="flex-1 bg-[#121212] w-[370px] h-[230px] rounded-xl">
+    <View className="flex-1 bg-[#121212] w-[360px] h-[230px] rounded-xl">
       <ImageBackground
         source={CardBG}
         className="w-full h-full"

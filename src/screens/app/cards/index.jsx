@@ -72,12 +72,12 @@ export default function CardScreen() {
                       />
                       <TouchableOpacity
                         onPress={() => setCardModalOpen(false)}
-                        className="bg-red-700 rounded-md px-2 py-1"
+                        className="bg-gray-100 rounded-md px-2 py-1"
                       >
                         <CustomTextComponent
                           type={`regular`}
                           content={`Cancel`}
-                          additionalClasses={`text-lg text-white `}
+                          additionalClasses={`text-lg text-red-500 `}
                         />
                       </TouchableOpacity>
                     </View>
@@ -104,12 +104,12 @@ export default function CardScreen() {
                       </TouchableOpacity>
                       <TouchableOpacity
                         onPress={() => setCardModalOpen(false)}
-                        className="bg-red-700 rounded-md px-2 py-1"
+                        className="bg-gray-100 rounded-md px-2 py-1"
                       >
                         <CustomTextComponent
                           type={`regular`}
                           content={`Delete Card`}
-                          additionalClasses={`text-lg text-white `}
+                          additionalClasses={`text-lg text-red-500 `}
                         />
                       </TouchableOpacity>
                     </View>

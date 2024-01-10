@@ -45,6 +45,22 @@ export const useOmniStore = create((set) => ({
       index: 4,
     },
   ],
+  savings: [
+    {
+      id:0,
+      title:"Macbook Pro M3",
+      target:15000,
+      saved:10000,
+      isActive:true
+    },
+    {
+      id:1,
+      title:"School Fees",
+      target:6000,
+      saved:6000,
+      isActive:false
+    },
+  ],
 
   authorize: () => set({ isAuthorized: true }),
 }));

@@ -32,7 +32,7 @@ export default function InvestScreen() {
             additionalClasses={`text-xl`}
           />
           <TouchableOpacity
-            onPress={() => navigation.navigate("add-savings-goal")}
+            onPress={() => navigation.navigate("add-investment-goal")}
             className="bg-black rounded-full px-5 py-1 flex flex-row items-center"
           >
             <CustomTextComponent

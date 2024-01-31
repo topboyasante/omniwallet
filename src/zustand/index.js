@@ -1,8 +1,8 @@
 import { create } from "zustand";
 
 export const useOmniStore = create((set) => ({
-  hasSeenOnboarding: false,
-  isAuthorized: false,
+  hasSeenOnboarding: true,
+  isAuthorized: true,
   wallets: [
     {
       name: "Nana Kwasi Asante",
@@ -61,6 +61,19 @@ export const useOmniStore = create((set) => ({
       isActive:false
     },
   ],
-
+  investments:[
+    {
+      id:0,
+      title:"XAUUSD",
+      currentAmount:10000,
+      isActive:true
+    },
+    {
+      id:1,
+      title:"T-Bills",
+      currentAmount:15000,
+      isActive:false
+    },
+  ],
   authorize: () => set({ isAuthorized: true }),
 }));

@@ -26,12 +26,12 @@ export default function CardScreen() {
           />
           <TouchableOpacity
             onPress={() => navigation.navigate("add-card")}
-            className="bg-black rounded-full px-5 py-2 flex flex-row items-center"
+            className="bg-black rounded-full px-5 py-1 flex flex-row items-center"
           >
             <CustomTextComponent
               type={`semibold`}
-              content={`Add Card`}
-              additionalClasses={`text-lg text-white ml-1`}
+              content={`Add`}
+              additionalClasses={`text-lg text-white`}
             />
           </TouchableOpacity>
         </View>

@@ -1,26 +1,26 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
 import SafeAreaContainer from "../../../components/ui/SafeAreaContainer";
 import CustomTextComponent from "../../../components/ui/Text";
-import { useNavigation } from "@react-navigation/native";
-import CompletedSavings from "../../../components/screen-components/savings/CompletedSavings";
+import ActiveInvestments from "../../../components/screen-components/investments/ActiveInvestments";
 import ComponentSwitcher from "../../../components/ui/ComponentSwitcher";
-import ActiveSavings from "../../../components/screen-components/savings/ActiveSavings";
+import CompletedInvestments from "../../../components/screen-components/investments/CompletedInvestments";
 
 const screens = [
   {
     id: 0,
     title: "Active",
-    content: <ActiveSavings />,
+    content: <ActiveInvestments />,
   },
   {
     id: 1,
     title: "Completed",
-    content: <CompletedSavings />,
+    content: <CompletedInvestments />,
   },
 ];
 
-export default function SaveScreen() {
+export default function InvestScreen() {
   const navigation = useNavigation();
   return (
     <SafeAreaContainer>
@@ -28,7 +28,7 @@ export default function SaveScreen() {
         <View className="flex flex-row justify-between items-center mb-5">
           <CustomTextComponent
             type={`semibold`}
-            content={`Your Savings`}
+            content={`Your Investments`}
             additionalClasses={`text-xl`}
           />
           <TouchableOpacity
